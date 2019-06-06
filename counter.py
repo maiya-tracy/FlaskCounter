@@ -1,12 +1,11 @@
 from flask import Flask, render_template, request, redirect, session
 app = Flask(__name__)
 app.secret_key = 'keep it secret, keep it safe' # set a secret key for security purposes
-
+#stuff
 # adding this method
 @app.route("/")
 def show_counter():
     print(request.form)
-    # session['session_num'] = 0
     if 'secret_key' in session:
         print('key exists!')
         session['session_num']+=1
